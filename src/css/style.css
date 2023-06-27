@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;600;700&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --corPrimaria: white;
+  --corSecundaria: aliceblue;
+  --corTexto: #000000;
+  --corBotao: white;
+}
+
+body {
+  background-color: var(--corPrimaria);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: 'Epilogue', sans-serif;
+}
+
+.card {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: var(--corPrimaria);
+  border-radius: 1rem;
+  max-height: 700px;
+  max-width: 700px;
+  height: 570px;
+  width: 375px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.card h3 {
+  color: var(--corTexto);
+}
+
+.cardDogGenerator {
+  display: flex;
+  background-color: var(--corSecundaria);
+  border-radius: 0.5rem;
+  margin-top: 20px;
+  width: 95%;
+  height: 80%;
+  overflow: hidden;
+  justify-content: center;
+}
+
+.button {
+  padding-top: 15px;
+}
+
+.button .button-dog {
+  width: 90px;
+  height: 40px;
+  background-color: var(--corBotao);
+  border-radius: 0.5rem;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  color: var(--corTexto);
+}
+
+
+
+button:active {
+  transform: scale(0.99);
+}
+
+/*configurando o botao*/
+
+.darkLightMode {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+  border: 1px solid var(--corTexto);
+  border-radius: 1rem;
+  margin-top: 25px;
+  width: 250px;
+  height: 80px;
+}
+
+.darkLightMode h4 {
+  font-weight: lighter;
+  font-style: italic;
+  color: var(--corTexto);
+}
+input[type=checkbox]{
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+
+label {
+  margin-top: 10px;
+  cursor: pointer;
+  text-indent: -9999px;
+  width: 80px;
+  height: 40px;
+  background: grey;
+  display: block;
+  border-radius: 100px;
+  position: relative;
+}
+
+label:after {
+  content: '';
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 30px;
+  height: 30px;
+  background: #fff;
+  border-radius: 90px;
+  transition: 0.6s;
+}
+
+input:checked + label {
+  background: #28292c;
+}
+
+input:checked + label:after {
+  left: calc(100% - 5px);
+  transform: translateX(-100%);
+}
+
+label:active:after {
+  width: 10px;
+}
